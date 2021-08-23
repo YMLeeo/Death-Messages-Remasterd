@@ -17,7 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build Project
       shell: cmd
-      run: "%MSBUILD_PATH%" "%SLN_PATH%" /build
+      run: |
+        "%MSBUILD_PATH%" "%SLN_PATH%" /build
     - name: Release
       uses: actions/upload-artifact@v2
       with:
